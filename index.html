@@ -1060,6 +1060,293 @@ body.academy-home{font-family:var(--notebook-text);font-weight:400;line-height:1
 :root[data-theme="dark"] .hero-primary{background:#ddd;color:#151515;border-color:#ddd}
 :root[data-theme="dark"] .hero-secondary{color:#eee;border-color:#888}
 :root[data-theme="dark"] .help-spotlight{box-shadow:0 0 0 200vmax #000000b8,0 0 0 4px #c9a76655}
+
+/* Event guide: two readable leaves, with the notebook fold kept clear. */
+.event-guide .guide-leaf{min-width:0;font-size:14px;line-height:1.8;word-break:keep-all;overflow-wrap:anywhere}
+.event-guide .guide-leaf:focus-visible{outline:2px solid var(--blue);outline-offset:-2px}
+.event-guide .guide-leaf-heading{padding:2px 0 19px;border-bottom:2px solid var(--academy-rule)}
+.event-guide .guide-leaf-heading .section-kicker{font-size:11px;letter-spacing:.045em;color:var(--muted);font-weight:600}
+.event-guide h2{font-size:25px;font-weight:750;line-height:1.45;letter-spacing:-.035em;margin:6px 0 12px}
+.event-guide p{font-size:14px;line-height:1.85;margin:9px 0 0}
+.event-guide .guide-section{padding:21px 0;border-bottom:1px solid var(--line)}
+.event-guide .guide-section:last-child{border-bottom:0;padding-bottom:15px}
+.event-guide h3{font-size:17px;font-weight:750;line-height:1.55;letter-spacing:-.025em;margin:0 0 12px}
+.event-guide h4{font-size:14px;line-height:1.65;margin:0 0 4px}
+.event-guide .guide-period{font-size:12px;color:var(--muted);line-height:1.8;font-variant-numeric:tabular-nums}
+.event-guide .guide-run{list-style:none;display:grid;gap:10px;margin:0;padding:0}
+.guide-run li{display:flex;align-items:start;gap:11px;font-size:13px;line-height:1.65}
+.guide-run li>span{display:flex;align-items:center;justify-content:center;flex:none;width:29px;height:29px;border:1px solid var(--line);border-radius:50%;font-size:11px;font-weight:650;color:var(--muted)}
+.guide-run strong{display:block;font-weight:500;color:var(--muted);font-size:12px}
+.guide-facts{margin:0}
+.guide-facts>div{display:grid;grid-template-columns:91px minmax(0,1fr);gap:10px;padding:9px 0;border-bottom:1px solid var(--line);font-size:13px;line-height:1.8}
+.guide-facts>div:first-child{padding-top:0}.guide-facts>div:last-child{padding-bottom:0;border-bottom:0}
+.guide-facts dt{font-weight:700}.guide-facts dd{margin:0}
+.event-guide .guide-source{margin-top:12px;font-size:11px;color:var(--muted);line-height:1.8}
+.event-guide a{text-underline-offset:3px;text-decoration-thickness:1px}
+.event-guide a:hover{text-decoration:none}
+.event-guide .guide-key-point{margin-top:20px;border:1px solid var(--line);border-left:3px solid var(--academy-gold);border-radius:3px;padding:16px 17px;background:var(--academy-paper)}
+.guide-key-point h3{margin:3px 0 8px}.guide-key-point .guide-label{font-size:11px;font-weight:650;color:var(--muted)}
+.guide-encounters{display:grid;gap:15px}
+.guide-encounters h4>span{display:block;font-size:13px;font-weight:650;color:var(--blue)}
+.guide-orbs{display:inline-flex;align-items:center;gap:2px;margin-right:3px;font-style:normal;white-space:nowrap;vertical-align:-.15em}
+.guide-orbs .notebook-ink-icon{width:1.05em;height:1.05em;margin-inline:0}
+.event-guide .guide-encounters p{font-size:13px;margin:4px 0 0}
+.event-guide .guide-list{font-size:13px;line-height:1.85;padding-left:19px;margin:15px 0 0}
+.guide-list li+li{margin-top:8px}
+.guide-styles{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.guide-styles>span{display:grid;grid-template-columns:minmax(0,1fr) 64px;align-items:center;gap:5px;border:1px solid var(--line);border-radius:3px;padding:8px 7px 8px 11px;font-size:12px;color:var(--muted);background:var(--academy-paper);min-width:0}
+.guide-style-copy{min-width:0}
+.guide-styles img{display:block;width:64px;height:68px;object-fit:contain;object-position:center bottom;align-self:end}
+.guide-styles b{display:block;font-size:14px;color:var(--ink);margin-bottom:2px}
+.guide-moves{width:100%;table-layout:fixed;border-collapse:collapse;margin-top:14px;font-size:13px;line-height:1.75}
+.guide-moves th,.guide-moves td{padding:11px 8px;text-align:left;border-bottom:1px solid var(--line);white-space:normal;word-break:keep-all;overflow-wrap:anywhere;vertical-align:top}
+.guide-moves thead th{font-size:11px;background:var(--academy-paper);color:var(--muted);font-weight:650}
+.guide-moves th:first-child{width:23%}.guide-moves th:nth-child(2){width:36%}
+.guide-moves tbody th{font-weight:700;color:var(--ink);background:transparent}
+.guide-moves tbody td:first-of-type{font-weight:650}
+.guide-moves small{display:block;font-size:11px;font-weight:500;color:var(--muted);margin-top:3px}
+.guide-row-source{display:block;width:fit-content;font-size:11px;margin-top:5px;font-weight:500}
+.guide-sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap;border:0}
+.guide-tips{list-style:none;margin:0;padding:0;display:grid;gap:9px;font-size:13px}
+.guide-tips li{display:grid;grid-template-columns:88px minmax(0,1fr);gap:10px}
+.guide-tips strong{font-weight:700}
+.academy-navigation .app-tabs{min-width:0}
+.academy-navigation .app-tabs button:nth-child(5){background:#e7eaf0;color:#5c6a79}
+:root[data-theme="dark"] .academy-navigation .app-tabs button:nth-child(5){background:#222;color:#bcbcbc;border-color:#3a3a3a}
+
+/* A trainer portrait occupies the free space beside the board bulk controls. */
+#setupPanel .board-actions{display:grid;grid-template-columns:minmax(0,1fr) 84px;align-items:center;gap:12px}
+.board-actions-copy{display:flex;flex-direction:column;gap:8px;min-width:0}
+.board-trainer-portrait{display:block;width:84px;height:84px;object-fit:contain;justify-self:end}
+
+@media(min-width:1000px){
+  #eventGuidePanel:not([hidden]){display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 76px;overflow:hidden}
+  .event-guide .guide-leaf{height:100%;min-height:0;overflow:auto;padding:0 8px 12px 0;scrollbar-width:thin;scrollbar-color:var(--academy-rule) transparent;overscroll-behavior:contain;scroll-padding-top:12px}
+  .notebook-paper:has(#eventGuideTab[aria-selected="true"])>.academy-navigation{margin-bottom:20px}
+  /* The nested reward grid spans both leaves, so its own gap must clear the fold. */
+  #referencePanel .reward-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:76px}
+  #referencePanel .reward-card{min-width:0;max-width:100%;overflow-wrap:anywhere}
+}
+@media(max-width:999px){
+  .event-guide .guide-current{margin-top:30px;padding-top:26px;border-top:2px solid var(--academy-rule)}
+}
+@media(max-width:600px){
+  .event-guide h2{font-size:23px}.event-guide h3{font-size:17px}
+  .event-guide .guide-leaf,.event-guide p{font-size:14px}
+  .event-guide .guide-key-point{padding:14px}
+  .guide-facts>div{grid-template-columns:78px minmax(0,1fr);gap:9px}
+  .guide-moves thead{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+  .guide-moves tbody tr{display:grid;grid-template-columns:76px minmax(0,1fr);gap:5px 10px;padding:13px 0;border-bottom:1px solid var(--line)}
+  .guide-moves th,.guide-moves td{border:0;padding:0;width:auto!important}
+  .guide-moves tbody th{grid-column:1;grid-row:1/3}
+  .guide-moves td{grid-column:2}
+  .guide-moves td:first-of-type{font-size:14px}.guide-moves td:last-child{font-size:12px;color:var(--muted)}
+  .guide-moves td br{display:none}.guide-row-source{display:inline-block;margin:4px 0 0}
+  .guide-styles{gap:8px}.guide-styles>span{grid-template-columns:minmax(0,1fr) 54px;padding:8px 5px 8px 8px;gap:2px}.guide-styles img{width:54px;height:60px}.guide-styles b{font-size:13px}
+}
+@media(max-width:520px){
+  #setupPanel .board-actions{grid-template-columns:minmax(0,1fr) 68px;gap:12px}
+  #setupPanel .board-bulk-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .board-trainer-portrait{width:68px;height:68px}
+}
+
+/* Mobile is a single reading surface. Desktop keeps its two notebook leaves. */
+.academy-navigation .app-tabs button .tab-mobile-label{display:none}
+.academy-navigation .app-tabs button .tab-desktop-label{display:inline;font:inherit;letter-spacing:inherit;color:inherit;opacity:1;margin:0}
+.mobile-catalog{display:none}
+.board-touch-hint{display:none}
+/* The browser must see the right touch policy BEFORE a gesture begins. */
+#setupPanel .board-viewport,#syncBoard{touch-action:pan-y pinch-zoom}
+#syncBoard .board-tile,#syncBoard .board-tile polygon{touch-action:none}
+
+@media(max-width:999px){
+ html{scroll-padding-top:66px}
+ body.academy-home{font-size:15px;line-height:1.75}
+ .wrap{max-width:760px;padding:0 0 24px;margin:auto}
+ .masthead-inner{min-height:58px;padding:10px 16px;gap:12px}
+ .academy-brand strong{font-size:17px}.academy-brand small{font-size:10px}
+ .masthead-note{display:none}
+ .academy-notebook{padding:0;border:0;border-radius:0;background:var(--card);box-shadow:none}
+ .academy-notebook:before,.academy-notebook:after,.notebook-paper:before,.notebook-binding{display:none}
+ .notebook-paper{padding:0 16px;min-height:0;border:0;border-radius:0;box-shadow:none;background:var(--card)}
+ .notebook-paper>.notebook-running-head,.chapter-stamp{display:none}
+ .academy-hero{display:none}
+ .academy-navigation{position:sticky;top:0;z-index:15;display:flex;align-items:center;flex-wrap:wrap;gap:0;margin:0 -16px 20px;padding:0 12px;background:var(--card);min-height:0;border-bottom:1px solid var(--line);box-shadow:0 3px 8px #00000008}
+ .notebook-preferences{display:flex;order:-1;width:100%;justify-content:flex-end;align-items:center;padding:8px 0;gap:8px}
+ .notebook-preferences:before{content:'아카데미 공략 수첩';font-size:14px;font-weight:750;margin-right:auto;color:var(--ink)}
+ .notebook-preferences .theme-toggle,.notebook-preferences .help-toggle{height:40px;width:40px;min-height:40px;margin:0;font-size:18px;border-radius:8px}
+ .academy-navigation .app-tabs{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;width:100%;flex:auto;overflow:visible;min-height:48px;align-items:stretch}
+ .academy-navigation .app-tabs button,.academy-navigation .app-tabs button[aria-selected="true"]{display:flex;align-items:center;justify-content:center;min-width:0;min-height:48px;padding:10px 1px;font-size:14px;line-height:1.4;white-space:nowrap;border:0;border-radius:6px 6px 0 0;background:transparent!important;color:var(--muted);box-shadow:none;transform:none}
+ .academy-navigation .app-tabs button[aria-selected="true"]{color:var(--ink);background:var(--academy-soft)!important;border-bottom:3px solid var(--academy-gold);font-weight:750}
+ .academy-navigation .app-tabs button[aria-selected="true"]:after{display:none}
+ .academy-navigation .app-tabs button>span,.academy-navigation .app-tabs button .tab-desktop-label{display:none}
+ .academy-navigation .app-tabs button .tab-mobile-label{display:inline;font:inherit;margin:0;color:inherit;opacity:1;letter-spacing:-.035em}
+ .notebook-chapter{margin:0 0 22px;padding:0 0 16px;min-height:0}
+ .notebook-chapter h2{font-size:23px;line-height:1.45}.notebook-chapter p{max-width:none;font-size:14px;line-height:1.75}
+ .notebook-chapter .section-kicker{font-size:12px}
+ .notebook-page,.notebook-left-leaf,.notebook-right-leaf{min-width:0}
+ .notebook-page .card h2{font-size:20px}
+ .notebook-page .hint,.notebook-page .small{font-size:13px;line-height:1.75}
+ .academy-home input,.academy-home select{font-size:16px;min-height:46px;padding:10px 8px}
+ .academy-home input[type="checkbox"]{min-height:20px;width:20px;height:20px;flex:none}
+ .notebook-pagination{margin-top:24px;padding:12px 0;gap:8px}
+ .notebook-pagination button{font-size:14px;min-height:44px;gap:6px}.notebook-page-number{font-size:10px}
+ .academy-footer{padding:18px 16px 24px;margin:0;font-size:12px}.academy-footer strong{font-size:14px}.academy-footer p{font-size:12px}
+
+ /* Board: maximize the map, with details directly above the multiplier. */
+ #setupPanel .board-content{display:flex;flex-direction:column;gap:14px;padding:0}
+ #setupPanel .board-switch{order:0;display:grid;grid-template-columns:1fr 1fr;max-width:none;width:100%;margin:0}
+ #setupPanel .board-switch button{min-height:46px;font-size:15px;padding:10px 6px}
+ #setupPanel .board-shell{display:contents}
+ #setupPanel .board-touch-hint{order:1;display:block;font-size:12px;color:var(--muted);line-height:1.75;margin:0}
+ #setupPanel .board-viewport{order:2;display:block;width:100%;min-width:0;margin:0;padding:0!important;max-height:none;overflow:visible;background:var(--academy-paper)!important;border-radius:8px!important}
+ #setupPanel .board-viewport svg{display:block;width:100%;height:auto;min-width:0;max-width:100%;max-height:none;flex:none}
+ #setupPanel .board-actions{order:3;display:block;margin:0}
+ #setupPanel .board-trainer-portrait{display:none}
+ #setupPanel .board-bulk-actions{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:6px}
+ #setupPanel .board-bulk-actions button{min-height:44px;font-size:13px!important;padding:9px 3px;white-space:normal}
+ #setupPanel .board-bulk-note{font-size:12px;line-height:1.75}
+ #setupPanel .board-actions .auto-label{font-size:14px;min-height:40px;gap:9px}
+ #setupPanel .board-side{order:4;display:flex;flex-direction:column;border:0;padding:0;gap:14px}
+ #setupPanel .board-side #boardTileDetail{order:0;min-height:78px;padding:13px;font-size:14px;line-height:1.75}
+ #setupPanel .board-side #boardTileDetail b{font-size:15px}
+ #setupPanel .board-side .board-mult{order:1;margin:0;padding:16px!important;border:1px solid var(--line)!important;border-top:2px solid var(--academy-gold)!important;border-radius:6px}
+ #setupPanel .board-mult>b{font-size:16px}.board-side .board-mult .small{font-size:13px}
+ #setupPanel .board-mult .mult-value{font-size:28px}
+ #setupPanel .board-mult .boost-open{min-height:46px;font-size:15px;margin-top:12px}
+ #setupPanel .boost-summary{font-size:14px}
+ #setupPanel .board-side #boardCount{order:2;font-size:14px;padding:8px 0}
+ #setupPanel .board-side #boardTotals{order:3;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px}
+ #setupPanel #boardTotals .stat{padding:12px;background:var(--academy-paper)!important;border:1px solid var(--line);border-radius:6px}
+ #setupPanel #boardTotals .label{font-size:14px}#setupPanel #boardTotals .value{font-size:24px}
+ #setupPanel .board-side #boardExtra{order:4;font-size:14px}#setupPanel .board-side #boardStatus{order:5;font-size:13px}
+ #setupPanel .manual-goal-settings{order:6;font-size:14px;padding-top:14px}
+ #setupPanel .manual-goal-settings summary{min-height:44px}
+ #setupPanel .manual-goal-settings .fields{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #setupPanel .color-field{padding:10px}.notebook-page .color-field label{font-size:14px}
+ #setupPanel .board-source{order:5;max-width:none;font-size:12px;line-height:1.8;margin:8px 0}
+
+ /* One continuous page: turn, ledger, recommendations, then history. */
+ #calculatorPanel:not([hidden]){display:flex;flex-direction:column;gap:0}
+ #calculatorPanel .notebook-left-leaf,#calculatorPanel .notebook-right-leaf{display:contents}
+ #calculatorPanel .lesson-strip{order:0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:12px;margin:0 0 20px;padding:15px;border-radius:7px}
+ #calculatorPanel .lesson-strip .planner-controls{display:block;min-width:0}
+ #calculatorPanel .lesson-strip .planner-controls label{font-size:14px}
+ #calculatorPanel .lesson-strip .planner-controls select{width:100%;max-width:none;min-width:0;font-size:16px;min-height:46px}
+ #calculatorPanel .lesson-strip #plannerProgress{font-size:13px}
+ #calculatorPanel .lesson-status{align-self:center}.lesson-status h3{font-size:13px}
+ #calculatorPanel #turnsRemaining{font-size:23px}#calculatorPanel #quickExamMode{font-size:12px}
+ #calculatorPanel #academyGoalCard{order:1;margin:0 0 24px;padding:0 0 20px!important;border-right:0!important;border-bottom:1px solid var(--line)!important}
+ #calculatorPanel .goal-header{align-items:center;gap:10px;flex-wrap:wrap}.notebook-page .exam-option{font-size:13px;gap:7px}
+ .inventory-color-head,.inventory-needed,#calculatorPanel .inventory-held{grid-template-columns:64px repeat(4,minmax(0,1fr));gap:5px}
+ .inventory-color-head{font-size:13px;margin-top:16px}.inventory-row-label{font-size:12px;white-space:normal;line-height:1.5}
+ .inventory-color-head .notebook-ink-icon{display:block;width:20px;height:20px;margin:0 auto 4px}
+ #calculatorPanel .inventory-held input{font-size:16px;text-align:center;min-height:46px;padding:10px 1px;appearance:textfield}
+ #calculatorPanel .inventory-held input::-webkit-inner-spin-button,#calculatorPanel .inventory-held input::-webkit-outer-spin-button{appearance:none;margin:0}
+ #calculatorPanel .inventory-needed .stat .value{font-size:19px}
+ #calculatorPanel .inventory-note{font-size:12px;text-align:left}
+ #calculatorPanel .first-turn-fold>summary,#calculatorPanel .exam-breakdown{font-size:14px;line-height:1.75}
+ #calculatorPanel #academyPlannerCard{order:2;padding:0!important;border:0!important;margin:0}
+ #academyPlannerCard .planner-header{display:block;margin-bottom:12px}
+ #academyPlannerCard .planner-header h2{font-size:20px;line-height:1.6;flex-wrap:wrap}
+ #academyPlannerCard .planner-header>.pill{display:none}
+ #academyPlannerCard>.hint{font-size:14px;margin-bottom:16px}
+ #academyPlannerCard .planner-top-grid{display:flex;flex-direction:column;gap:12px;margin:0 0 14px}
+ #academyPlannerCard .planner-top-main{padding:0;border:0}
+ #academyPlannerCard #plannerDeficits{font-size:14px;margin:0 0 8px}
+ #academyPlannerCard .planner-other{padding:0;border:0}.planner-other summary{min-height:44px;padding:10px 0;font-size:14px}
+ #academyPlannerCard .planner-top-side .planner-other{padding:0;border:0}
+ #academyPlannerCard .planner-advisory{padding:12px 14px;margin:12px 0 20px;font-size:13px;line-height:1.75}
+ #academyPlannerCard .planner-advisory strong,#academyPlannerCard .planner-advisory p{font-size:13px}
+ #academyPlannerCard .planner-ranking-head{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:18px 0 12px}
+ #academyPlannerCard .planner-ranking-head h3{font-size:16px}
+ #academyPlannerCard .planner-mode-switch button{font-size:13px;min-height:44px;padding:8px 11px}
+ #academyPlannerCard .planner-priorities{display:grid;grid-template-columns:minmax(0,1fr);gap:0}
+ #academyPlannerCard .planner-priority-row{grid-template-columns:32px minmax(0,1fr);gap:9px;padding:17px 0!important}
+ #academyPlannerCard .planner-priority-row:first-child{padding:16px 12px!important;border-radius:6px}
+ #academyPlannerCard .planner-rank{font-size:13px}
+ #academyPlannerCard .planner-priority-row b{font-size:16px;line-height:1.65}
+ #academyPlannerCard .planner-priority-reward{font-size:15px;line-height:1.7}
+ #academyPlannerCard .planner-priority-row p{font-size:14px;line-height:1.8}
+ #academyPlannerCard .planner-priority-row .small,#academyPlannerCard .planner-partial-warning,#academyPlannerCard .planner-choice-warning{font-size:13px!important}
+ #academyPlannerCard .planner-upside-badge,#academyPlannerCard .planner-completion-badge{font-size:13px;line-height:1.7;white-space:normal}
+ #academyPlannerCard .planner-reason-detail summary,#academyPlannerCard .planner-names summary{font-size:13px;min-height:36px;padding:6px 0}
+ #academyPlannerCard .planner-reason-detail p,#academyPlannerCard .planner-names p{font-size:14px!important}
+ #academyPlannerCard .planner-clavell b{font-size:15px}#academyPlannerCard .planner-clavell p{font-size:14px}
+ #academyPlannerCard .planner-scope{font-size:14px;line-height:1.8;margin:20px 0}
+ #calculatorPanel .history-card{order:3;margin:28px 0 12px!important;padding:20px 0 0!important;border-top:2px solid var(--line)!important}
+ #calculatorPanel .history-card>.section-kicker{display:none}
+ #calculatorPanel .selection-heading{gap:8px;flex-wrap:wrap}
+ #calculatorPanel .history-card .selection-heading h2{font-size:20px}
+ #calculatorPanel .history-card #recordRewardButton{font-size:14px;min-height:44px;padding:10px 12px}
+ #calculatorPanel .history-card #clearSelectionHistoryButton{font-size:13px;min-height:44px}
+ #calculatorPanel .selection-log{min-height:0;max-height:none;overflow:visible;margin-top:12px}
+ #calculatorPanel .selection-log ol{display:flex;flex-direction:column-reverse;list-style:none}
+ #calculatorPanel .selection-log li{font-size:14px;padding:13px 0}
+ #calculatorPanel .selection-log .small{font-size:13px}
+ #calculatorPanel .history-actions button{min-height:44px;font-size:13px}
+ .mobile-play-tools{position:fixed;display:grid;grid-template-columns:1fr 1fr 1.15fr;gap:6px;bottom:0;left:0;right:0;z-index:20;border-radius:0;padding:8px 12px calc(8px + env(safe-area-inset-bottom));background:var(--card);border:0;border-top:1px solid var(--line);box-shadow:0 -3px 14px #0000000a}
+ .mobile-play-tools a,.mobile-play-tools .floating-choice-add{display:flex;align-items:center;justify-content:center;position:static;min-height:46px;padding:10px 4px;font-size:14px;line-height:1.5;text-decoration:none;border-radius:6px!important;white-space:nowrap;box-shadow:none!important}
+ .mobile-play-tools a{color:var(--ink);background:var(--academy-paper);border:1px solid var(--line)}
+ .mobile-play-tools .floating-choice-add{background:var(--blue);color:var(--card)}
+ body:has(#calculatorTab[aria-selected="true"]){padding-bottom:calc(72px + env(safe-area-inset-bottom))}
+ .notebook-paper:has(#calculatorTab[aria-selected="true"]){padding-top:0}
+ .notebook-paper:has(#calculatorTab[aria-selected="true"])>.academy-navigation{margin-bottom:20px}
+
+ /* A searchable mobile ledger replaces the desktop catalog grids and tables. */
+ #referencePanel>.reference-grid,#referencePanel>.reference-intro{display:none}
+ .mobile-catalog{display:block}
+ .mobile-catalog-tools label{display:block;font-size:16px;font-weight:750;margin-bottom:8px}
+ .mobile-catalog-tools input{width:100%;min-width:0}
+ .mobile-catalog-filters{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:5px;margin-top:12px}
+ .mobile-catalog-filters button{padding:9px 2px;min-height:44px;font:650 14px/1.5 var(--notebook-text);background:var(--academy-paper);color:var(--ink);border:1px solid var(--line);border-radius:6px}
+ .mobile-catalog-filters button[aria-pressed="true"]{background:var(--ink);color:var(--card);border-color:var(--ink)}
+ .mobile-catalog-note,.mobile-catalog-count{font-size:12px;line-height:1.8;color:var(--muted);margin:12px 0}
+ .mobile-catalog-list{display:grid;gap:10px}
+ .mobile-reward{min-width:0;border:1px solid var(--line);border-radius:8px;background:var(--academy-paper);overflow:hidden}
+ .mobile-reward>summary{list-style:none;position:relative;cursor:pointer;display:flex;flex-direction:column;align-items:flex-start;gap:6px;padding:14px 38px 14px 14px;min-height:84px;overflow-wrap:anywhere}
+ .mobile-reward>summary::-webkit-details-marker{display:none}
+ .mobile-reward>summary:after{content:'＋';position:absolute;right:13px;top:18px;font-size:20px;line-height:1;color:var(--muted)}
+ .mobile-reward[open]>summary:after{content:'−'}
+ .mobile-reward-kind{font-size:11px;font-weight:650;color:var(--muted)}
+ .mobile-reward>summary>strong{font-size:16px;font-weight:750;line-height:1.6}
+ .mobile-reward-preview{font-size:14px;line-height:1.8;color:var(--blue);font-weight:650}
+ .mobile-reward-preview .small,.mobile-reward-preview .reward-line{font:inherit;border:0;padding:0}
+ .mobile-reward .orb-chip{font-size:13px;padding:3px 6px}
+ .mobile-reward .notebook-ink-icon{width:17px;height:17px;vertical-align:-3px}
+ .mobile-reward-body{padding:14px;border-top:1px solid var(--line);background:var(--card);font-size:14px;line-height:1.85;overflow-wrap:anywhere}
+ .mobile-reward-body p,.mobile-reward-body .small,.mobile-reward-body .reward-line{font-size:14px;line-height:1.85}
+ .mobile-reward-body .name-list{gap:7px;margin:12px 0 0}.mobile-reward-body .name-list span{font-size:14px;padding:5px 8px}
+ .mobile-reward-facts{margin:0}.mobile-reward-facts>div{padding:8px 0;border-bottom:1px solid var(--line)}
+ .mobile-reward-facts>div:last-child{border:0}.mobile-reward-facts dt{font-size:12px;color:var(--muted)}.mobile-reward-facts dd{margin:3px 0 0}
+ .mobile-catalog-empty{font-size:14px;padding:24px 8px;color:var(--muted);text-align:center}
+ .mobile-catalog-footer{margin-top:22px}.mobile-catalog-footer>a{display:block;padding:12px;text-align:center;min-height:46px;border:1px solid var(--line);border-radius:6px;font-size:14px}
+ .mobile-catalog-footer .warning{font-size:13px;line-height:1.8}
+ #probabilityPanel>.card{padding:0!important}
+ #probabilityPanel h2{font-size:22px}#probabilityPanel h3{font-size:18px;line-height:1.65}
+ #probabilityPanel .probability-note,#probabilityPanel .probability-note p{font-size:14px;line-height:1.85}
+ #probabilityPanel .table-wrap{max-width:100%;overflow-x:auto}
+ #probabilityPanel table{font-size:14px}
+ #probabilityPanel .probability-details summary{font-size:14px;padding:14px 12px;line-height:1.65}
+ /* Dialogs remain reachable above the on-screen keyboard. */
+ .academy-home .name-picker{width:calc(100% - 16px)!important;max-height:calc(100dvh - 24px);border-radius:10px}
+ .picker-head h3{font-size:20px}.academy-home .picker-head{padding:16px!important}
+ .academy-home .picker-close{min-height:44px;font-size:14px}
+ .academy-home .picker-tabs button{min-height:44px;font-size:14px;padding:9px 12px}
+ .academy-home .picker-items button{font-size:15px!important;min-height:48px;padding:12px!important}
+ .academy-home .picker-items .small{font-size:13px}
+ .academy-home .boost-character{min-height:78px;font-size:14px}.academy-home .boost-character b{font-size:14px}
+ .event-guide .guide-leaf{overflow:visible;height:auto}
+ .event-guide .guide-leaf,.event-guide p{font-size:15px}
+}
+@media(max-width:360px){
+ .notebook-paper{padding-inline:12px}.academy-navigation{margin-inline:-12px;padding-inline:8px}
+ .inventory-color-head,.inventory-needed,#calculatorPanel .inventory-held{grid-template-columns:54px repeat(4,minmax(0,1fr));gap:4px}
+ #calculatorPanel .inventory-needed .stat .value{font-size:17px}
+ #setupPanel .board-bulk-actions{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+/* The utility row scrolls away, leaving only the five tabs stuck at the top. */
+@media(max-width:999px){.academy-navigation{top:-56px}}
 </style>
 </head><body class="academy-home">
 <!-- BEGIN ACADEMY HOMEPAGE HEADER -->
@@ -1090,21 +1377,143 @@ body.academy-home{font-family:var(--notebook-text);font-weight:400;line-height:1
 <div class="notebook-running-head"><span>PASIO ACADEMY</span><span>나만의 공략 수첩 <i aria-hidden="true">✦</i> TRAINER’S FIELD NOTES</span></div>
 <div class="navigation-row academy-navigation">
   <div class="app-tabs" role="tablist" aria-label="수첩 책갈피">
-    <button type="button" id="setupTab" role="tab" aria-controls="setupPanel" aria-selected="true" tabindex="0"><span aria-hidden="true">01</span> 보드 · 배수</button>
-    <button type="button" id="calculatorTab" role="tab" aria-controls="calculatorPanel" aria-selected="false" tabindex="-1"><span aria-hidden="true">02</span> 수업 진행</button>
-    <button type="button" id="referenceTab" role="tab" aria-controls="referencePanel" aria-selected="false" tabindex="-1"><span aria-hidden="true">03</span> 보상 도감</button>
-    <button type="button" id="probabilityTab" role="tab" aria-controls="probabilityPanel" aria-selected="false" tabindex="-1"><span aria-hidden="true">04</span> 확률 정보</button>
+    <button type="button" id="eventGuideTab" role="tab" aria-label="이벤트 안내" aria-controls="eventGuidePanel" aria-selected="true" tabindex="0"><span aria-hidden="true">01</span><span class="tab-desktop-label">이벤트 안내</span><span class="tab-mobile-label" aria-hidden="true">안내</span></button>
+    <button type="button" id="setupTab" role="tab" aria-label="보드 · 배수" aria-controls="setupPanel" aria-selected="false" tabindex="-1"><span aria-hidden="true">02</span><span class="tab-desktop-label">보드 · 배수</span><span class="tab-mobile-label" aria-hidden="true">보드·배수</span></button>
+    <button type="button" id="calculatorTab" role="tab" aria-label="수업 진행" aria-controls="calculatorPanel" aria-selected="false" tabindex="-1"><span aria-hidden="true">03</span><span class="tab-desktop-label">수업 진행</span><span class="tab-mobile-label" aria-hidden="true">수업</span></button>
+    <button type="button" id="referenceTab" role="tab" aria-label="보상 도감" aria-controls="referencePanel" aria-selected="false" tabindex="-1"><span aria-hidden="true">04</span><span class="tab-desktop-label">보상 도감</span><span class="tab-mobile-label" aria-hidden="true">보상</span></button>
+    <button type="button" id="probabilityTab" role="tab" aria-label="확률 정보" aria-controls="probabilityPanel" aria-selected="false" tabindex="-1"><span aria-hidden="true">05</span><span class="tab-desktop-label">확률 정보</span><span class="tab-mobile-label" aria-hidden="true">확률</span></button>
   </div>
   <div class="notebook-preferences"><button type="button" id="themeToggle" class="theme-toggle" aria-label="다크 모드로 전환" title="다크 모드로 전환" aria-pressed="false">🌙</button><button type="button" id="academyHelpButton" class="help-toggle" aria-label="현재 페이지 사용법" title="현재 페이지 사용법" aria-expanded="false" aria-controls="academyHelpLayer">?</button></div>
 </div>
-<div class="notebook-chapter"><div><span class="section-kicker" id="notebookChapterNumber">첫 번째 장 · 준비</span><h2 id="notebookChapterTitle">보드와 배수 준비하기</h2><p id="notebookChapterDescription">원하는 보드와 수업에 함께할 캐릭터를 골라보세요.</p></div><span class="chapter-stamp" aria-hidden="true">ACADEMY<br><b>FIELD NOTES</b></span></div>
+<div class="notebook-chapter"><div><span class="section-kicker" id="notebookChapterNumber">첫 번째 장 · 안내</span><h2 id="notebookChapterTitle">아카데미 이벤트 알아보기</h2><p id="notebookChapterDescription">이벤트의 기본 규칙과 이번 승재의 육성 방향을 확인하세요.</p></div><span class="chapter-stamp" aria-hidden="true">ACADEMY<br><b>FIELD NOTES</b></span></div>
 <!-- END ACADEMY HOMEPAGE HEADER -->
-<section id="setupPanel" class="app-panel notebook-page" role="tabpanel" aria-labelledby="setupTab"><section class="card full" id="boardCard" tabindex="-1"><div class="board-fold" id="boardFold"><div class="board-page-heading"><span><span class="section-kicker">01 / 수업 준비</span><strong>목표 보드 설정</strong></span><span class="board-fold-summary" id="boardFoldSummary">물의 오의 · 0타일 · 1.5×</span></div><div class="board-content">
+<!-- BEGIN ACADEMY EVENT GUIDE -->
+<section id="eventGuidePanel" class="app-panel notebook-page event-guide" role="tabpanel" aria-labelledby="eventGuideTab">
+  <article class="guide-leaf guide-basics" aria-labelledby="academyBasicsTitle" tabindex="0">
+    <header class="guide-leaf-heading">
+      <span class="section-kicker">ACADEMY / 기본 안내</span>
+      <h2 id="academyBasicsTitle">아카데미 이벤트란?</h2>
+      <p>버디를 모아 보드를 열고, 이벤트 버디즈를 <strong>원하는 기술과 능력으로 육성</strong>하는 이벤트입니다. 여러 번 도전하며 마음에 드는 육성 결과를 남겨보세요.</p>
+    </header>
+
+    <section class="guide-section" aria-labelledby="academyRunTitle">
+      <h3 id="academyRunTitle">한 회차의 진행</h3>
+      <ol class="guide-run">
+        <li><span>01</span><div>수업·교류<strong>필요한 색의 버디 수집</strong></div></li>
+        <li><span>02</span><div>6턴 · 중간고사<strong>육성 중인 버디즈로 시험</strong></div></li>
+        <li><span>03</span><div>수업·교류 → 12턴 · 기말고사<strong>부족한 버디 보충·시험 준비</strong></div></li>
+        <li><span>04</span><div>에필로그·결과 확정<strong>최종 보드를 정리한 뒤 확정</strong></div></li>
+      </ol>
+    </section>
+
+    <section class="guide-section" aria-labelledby="academyRulesTitle">
+      <h3 id="academyRulesTitle">알아둘 기본 규칙</h3>
+      <dl class="guide-facts">
+        <div><dt>버디 수집</dt><dd>스테이지마다 색과 수량이 다릅니다. <strong>필요한 색</strong>에 맞춰 선택하세요.</dd></div>
+        <div><dt>보드 육성</dt><dd>네 색 버디로 능력·패시브를 강화하고, 기술머신으로 기술을 습득합니다.</dd></div>
+        <div><dt>배수 편성</dt><dd>대상 버디즈를 편성하면 <strong>전투 보상</strong>이 늘어납니다. 교류에는 적용되지 않습니다.</dd></div>
+        <div><dt>시험</dt><dd>육성 중인 버디즈 혼자 도전합니다. <strong>재도전이 불가능</strong>하니 입장 전에 강화하세요. 불합격해도 진행은 가능합니다.</dd></div>
+        <div><dt>결과 확정</dt><dd><strong>에필로그 전에</strong> 실제 사용할 기술과 패널로 최종 보드를 정리하세요.</dd></div>
+        <div><dt>다음 도전</dt><dd>버디와 육성 중 보드는 초기화됩니다. 완주 후 <strong>이전 완성 보드와 새 보드 중 하나</strong>를 남깁니다. 회차별 보드는 합쳐지지 않습니다.</dd></div>
+      </dl>
+      <p class="guide-source">기본 규칙 참고 · <a href="https://pokemonmasters-game.com/ko-KR/announcements/Event_7120_3W_1" target="_blank" rel="noopener noreferrer">공식 아카데미 안내 ↗</a></p>
+    </section>
+
+    <section class="guide-section guide-key-point" id="academyFiveClears" aria-labelledby="academyClearsTitle">
+      <span class="guide-label">처음이라면</span>
+      <h3 id="academyClearsTitle">먼저 5회 완주하세요</h3>
+      <p>완주하면 <strong>아카데미 승재의 EX 등급 상승 재료</strong>를 모을 수 있고, 횟수가 쌓일수록 그린과 오박사의 등장 확률도 올라갑니다. 시험 대비에도 도움이 되니, 초반부터 좋은 교류만 기다리며 초기화하기보다 우선 5회 완주를 목표로 하세요.</p>
+      <p class="guide-source">등장 확률 참고 · <a href="https://www.reddit.com/r/PokemonMasters/comments/1xud7le/psa_the_chances_of_blue_appearing_increase_the/" target="_blank" rel="noopener noreferrer">해외 커뮤니티 공략 ↗</a></p>
+    </section>
+
+    <section class="guide-section" aria-labelledby="academyBlueTitle">
+      <h3 id="academyBlueTitle">그린은 왜 좋은가요?</h3>
+      <div class="guide-encounters">
+        <div><h4>그린 <span><i class="guide-orbs" aria-label="빨강, 파랑, 초록, 노랑">🔴 🔵 🟢 🟡</i> 각 400개 확정</span></h4><p>여러 보드에 필요한 버디를 한꺼번에 확보해 <strong>목표 구성을 완성하는 데 큰 도움</strong>이 됩니다.</p></div>
+        <div><h4>오박사 <span><i class="guide-orbs" aria-label="빨강, 파랑, 초록, 노랑">🔴 🔵 🟢 🟡</i> 색마다 30개씩 95% / 400개씩 5%</span></h4><p>성공하면 그린과 같은 양이지만, 대부분 30개씩 받으므로 <strong>그린보다 안정성이 낮습니다.</strong></p></div>
+      </div>
+      <ul class="guide-list">
+        <li><strong>오박사를 먼저 선택하면 이후 그린이 등장하지 않습니다.</strong> 그린을 기다릴 기회가 남아 있다면 신중하게 고르세요.</li>
+        <li>그린을 먼저 선택한 뒤에는 오박사가 등장할 수 있습니다.</li>
+        <li>완주로 올라가는 것은 <strong>등장 확률</strong>입니다. 오박사의 400개 보상 확률은 5%입니다.</li>
+      </ul>
+      <p class="guide-source">교류 보상·등장 제한 참고 · <a href="https://bulbapedia.bulbagarden.net/wiki/Academy_event" target="_blank" rel="noopener noreferrer">Bulbapedia ↗</a></p>
+    </section>
+  </article>
+
+  <article class="guide-leaf guide-current" aria-labelledby="academyCurrentTitle" tabindex="0">
+    <header class="guide-leaf-heading">
+      <span class="section-kicker">이번 이벤트 / 열혈 수업</span>
+      <h2 id="academyCurrentTitle">승재 &amp; 우라오스</h2>
+      <p class="guide-period"><time datetime="2026-11-12T15:00:00+09:00">2026.11.12 15:00</time> ~ <time datetime="2026-11-30T14:59:00+09:00">11.30 14:59</time> · 한국 시간</p>
+    </header>
+
+    <section class="guide-section" aria-labelledby="academyStyleTitle">
+      <h3 id="academyStyleTitle">물과 악, 한쪽을 선택하세요</h3>
+      <div class="guide-styles">
+        <span><span class="guide-style-copy"><b>연격태세 · 물</b>물의 오의</span><img src="characters/승재-연격태세.png" width="68" height="68" alt="승재 · 연격태세 · 물"></span>
+        <span><span class="guide-style-copy"><b>일격태세 · 악</b>악의 오의</span><img src="characters/승재-일격태세.png" width="68" height="68" alt="승재 · 일격태세 · 악"></span>
+      </div>
+      <p>‘치고마 진화의 오의!!’에서 얻은 <strong>족자 세트로 한쪽만 선택</strong>합니다. 이번 개최에서는 <strong>선택 후 변경할 수 없으므로</strong>, 부족한 타입과 함께 사용할 버디즈를 확인하세요.</p>
+      <p class="guide-source">기간·선택 규칙 · <a href="https://pokemonmasters-game.com/ko-KR/announcements/Event_8100_3W_2" target="_blank" rel="noopener noreferrer">공식 이벤트 안내 ↗</a></p>
+    </section>
+
+    <section class="guide-section guide-key-point" aria-labelledby="academyRockSmashTitle">
+      <span class="guide-label">모든 육성 방향 공통</span>
+      <h3 id="academyRockSmashTitle">바위깨기 + 확정 풀죽음</h3>
+      <p><strong>바위깨기와 ‘공격시풀죽음부여9’ 패널</strong>을 우선 확보하세요. 풀죽음이 통하는 상대의 행동을 막고 방어도 낮춰, 공격·탱커·보조 모두에 유용합니다.</p>
+      <p class="guide-source"><a href="https://www.reddit.com/r/PokemonMasters/comments/1xvb3pl/academy_report_card_victor_urshifu/" target="_blank" rel="noopener noreferrer"><strong>해외 공략 ↗</strong></a></p>
+    </section>
+
+    <section class="guide-section" id="academyMoveGuide" aria-labelledby="academyMovesTitle">
+      <h3 id="academyMovesTitle">추천 기술머신</h3>
+      <p><strong>바위깨기를 기본으로 배우고, 나머지 2개</strong>를 고르는 구성입니다. 관련 보드 패널까지 확보하는 기준입니다.</p>
+      <table class="guide-moves">
+        <caption class="guide-sr-only">바위깨기 외에 추가할 기술머신 두 개와 용도별 참고 공략</caption>
+        <thead><tr><th scope="col">육성 방향</th><th scope="col">추가 기술머신 2개</th><th scope="col">활용 · 출처</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">공격·범용</th><td>공격교과복습<br>+ 수비교과복습</td><td>공격 강화와 생존. 장기전·레전드 어드벤처용 구성. <a class="guide-row-source" href="https://www.reddit.com/r/PokemonMasters/comments/1xvb3pl/academy_report_card_victor_urshifu/" target="_blank" rel="noopener noreferrer"><strong>해외 공략 ↗</strong></a></td></tr>
+          <tr><th scope="row">공격·인파이트</th><td>공격교과복습<br>+ 인파이트</td><td>공격 능력치와 인파이트 화력 확보. <a class="guide-row-source" href="https://www.reddit.com/r/PokemonMasters/comments/1xvb3pl/academy_report_card_victor_urshifu/" target="_blank" rel="noopener noreferrer"><strong>해외 공략 ↗</strong></a></td></tr>
+          <tr><th scope="row">탱커</th><td>수비교과복습<br>+ 방어</td><td>지속회복·버티기와 데미지 방어로 생존. <a class="guide-row-source" href="https://www.reddit.com/r/PokemonMasters/comments/1xvb3pl/academy_report_card_victor_urshifu/" target="_blank" rel="noopener noreferrer"><strong>해외 공략 ↗</strong></a></td></tr>
+          <tr><th scope="row">보조·속공</th><td>발군업<br>+ 스피드업</td><td>아군 화력 지원과 BC 가속. <a class="guide-row-source" href="https://www.reddit.com/r/PokemonMasters/comments/1xvb3pl/academy_report_card_victor_urshifu/" target="_blank" rel="noopener noreferrer"><strong>해외 공략 ↗</strong></a></td></tr>
+          <tr><th scope="row">보조·생존</th><td>발군업<br>+ 수비교과복습</td><td>아군 지원과 자신의 생존 병행. <a class="guide-row-source" href="https://t-pokeiku.com/【ポケマス】マサルアカデミー＆ウーラオスれ" target="_blank" rel="noopener noreferrer">해외 육성 예시 ↗</a></td></tr>
+          <tr><th scope="row">보조·자체 화력</th><td>발군업<br>+ 공격교과복습</td><td>아군 지원과 자신의 버디즈기술 화력 확보. <a class="guide-row-source" href="https://www.reddit.com/r/PokemonMasters/comments/1xvb3pl/academy_report_card_victor_urshifu/" target="_blank" rel="noopener noreferrer"><strong>해외 공략 ↗</strong></a></td></tr>
+          <tr><th scope="row">보조·화상<small>물 타입 한정</small></th><td>발군업<br>+ 열탕</td><td>화상과 특수방어 감소 추가. <a class="guide-row-source" href="https://t-pokeiku.com/【ポケマス】マサルアカデミー＆ウーラオスれ" target="_blank" rel="noopener noreferrer">해외 육성 예시 ↗</a></td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="guide-section" aria-labelledby="academyMoveNotesTitle">
+      <h3 id="academyMoveNotesTitle">기술을 고를 때</h3>
+      <dl class="guide-facts">
+        <div><dt>수비교과복습</dt><dd>관련 패널로 방어·특수방어뿐 아니라 <strong>스피드·지속회복·버티기</strong>도 확보합니다.</dd></div>
+        <div><dt>스피드업</dt><dd>단순 스피드 상승보다 <strong>첫 사용 시 BC 가속 패널 2개</strong>가 핵심입니다.</dd></div>
+        <div><dt>방어</dt><dd>기본 사용 횟수는 <strong>1회</strong>입니다. 위험한 공격을 넘길 때 사용하세요.</dd></div>
+        <div><dt>열탕</dt><dd><strong>물 타입만 선택 가능</strong>합니다. 화상 같은 상태이상이 필요한 콘텐츠에서 활용하세요.</dd></div>
+      </dl>
+      <p class="guide-source"><a href="https://www.reddit.com/r/PokemonMasters/comments/1xvb3pl/academy_report_card_victor_urshifu/" target="_blank" rel="noopener noreferrer"><strong>해외 기술 해설 ↗</strong></a></p>
+    </section>
+
+    <section class="guide-section" aria-labelledby="academyTipsTitle">
+      <h3 id="academyTipsTitle">진행 요령</h3>
+      <ol class="guide-tips">
+        <li><strong>초반</strong>시험에 사용할 기술과 공격 수단 확보</li>
+        <li><strong>시험 전</strong>당장 시험을 통과할 수 있도록 보드 조정</li>
+        <li><strong>후반</strong>부족한 색 보충·그린을 기다릴 기회 고려</li>
+        <li><strong>에필로그 전</strong>실제 사용할 최종 보드로 정리</li>
+      </ol>
+    </section>
+  </article>
+</section>
+<!-- END ACADEMY EVENT GUIDE -->
+<section id="setupPanel" class="app-panel notebook-page" role="tabpanel" aria-labelledby="setupTab" hidden><section class="card full" id="boardCard" tabindex="-1"><div class="board-fold" id="boardFold"><div class="board-page-heading"><span><span class="section-kicker">01 / 수업 준비</span><strong>목표 보드 설정</strong></span><span class="board-fold-summary" id="boardFoldSummary">물의 오의 · 0타일 · 1.5×</span></div><div class="board-content">
 <div class="board-switch" role="group" aria-label="우라오스 보드 종류">
 <button type="button" data-board-variant="water" class="active" title="물의 오의 · 연격태세">연격태세 · 물</button>
 <button type="button" data-board-variant="dark" title="악의 오의 · 일격태세">일격태세 · 악</button>
 </div>
+<p class="board-touch-hint">타일을 누른 채 밀면 연속 선택 · 빈 배경을 밀면 페이지 스크롤</p>
 <div class="board-actions">
+<div class="board-actions-copy">
 <div class="board-bulk-actions" role="group" aria-label="보드 일괄 선택">
 <button type="button" id="boardSelectRed" aria-label="빨강 보드 전체 선택·해제" title="빨강 보드 전체 선택·해제">🔴 전체</button>
 <button type="button" id="boardSelectBlue" aria-label="파랑 보드 전체 선택·해제 · 외곽 공격·특수공격 제외" title="파랑 보드 전체 선택·해제 · 외곽 공격·특수공격 제외">🔵 전체</button>
@@ -1113,6 +1522,8 @@ body.academy-home{font-family:var(--notebook-text);font-weight:400;line-height:1
 </div>
 <p class="board-bulk-note">파랑 전체 선택은 외곽 공격·특수공격 패널을 제외합니다.</p>
 <label class="auto-label"><input id="boardAutoApply" type="checkbox" checked> 목표량에 자동 반영</label>
+</div>
+<img id="boardTrainerPortrait" class="board-trainer-portrait" src="characters/승재-연격태세.png" width="84" height="84" alt="승재 · 연격태세 · 물">
 </div>
 <div class="board-shell"><div class="board-viewport"><svg id="syncBoard" role="group" aria-label="승재 우라오스 버디스톤 보드"></svg></div><aside class="board-side"><div id="boardCount" class="board-extra">선택 타일 0 / 126</div><div id="boardTotals" class="stat-row" style="grid-template-columns:repeat(2,1fr)"></div><div id="boardExtra" class="board-extra"></div><div id="boardStatus" class="board-status"></div><div id="boardTileDetail" class="tile-detail"><b>타일 안내</b>타일을 누르거나 가리키면 효과와 필요한 오브를 확인할 수 있습니다.</div><div class="board-mult"><b>전투 배수 <span class="mult-value" id="multText">1.5×</span></b><input id="mult" type="hidden" value="1.5"><button id="openMultiplierPicker" class="boost-open" type="button">배수 캐릭터 선택</button><div id="selectedBoostSummary" class="boost-summary">선택한 캐릭터 없음 · 0/3</div><span class="small">일반·특별 전투와 쿠쿠이·클라벨에 적용 · 시험 1.5배 고정</span></div><details class="manual-goal-settings"><summary>목표량 직접 입력</summary><p class="small">보드 자동 반영을 끄면 직접 입력할 수 있습니다.</p><div class="fields">
 <div class="color-field red"><label for="needR">🔴 빨강</label><input id="needR" inputmode="numeric" type="number" min="0" value="0"></div><div class="color-field blue"><label for="needB">🔵 파랑</label><input id="needB" inputmode="numeric" type="number" min="0" value="0"></div><div class="color-field green"><label for="needG">🟢 초록</label><input id="needG" inputmode="numeric" type="number" min="0" value="0"></div><div class="color-field yellow"><label for="needY">🟡 노랑</label><input id="needY" inputmode="numeric" type="number" min="0" value="0"></div></div>
@@ -1179,7 +1590,7 @@ body.academy-home{font-family:var(--notebook-text);font-weight:400;line-height:1
 </section>
 <section id="referencePanel" class="app-panel notebook-page" role="tabpanel" aria-labelledby="referenceTab" hidden>
 <div class="reference-intro"><span class="section-kicker">수업 참고 자료</span><h2>보상 도감</h2><p>전투와 교류에서 얻는 오브를 한곳에 모았어요. 전투 보상에는 현재 설정한 배수를 적용합니다.</p><nav class="reference-jumps" aria-label="보상 종류 바로가기"><a href="#referenceExams">필수 전투</a><a href="#referenceSpecial">특별 전투</a><a href="#referenceBattles">일반 전투</a><a href="#referenceStories">비전투·교류</a></nav></div>
-<div class="reference-grid"><section class="card full" id="referenceExams"><h2>필수 전투 보상</h2><p class="hint">중간·기말고사는 1.5배 고정입니다.</p><div class="table-wrap"><table><thead><tr><th>전투 유형</th><th>기본 보상</th><th>현재 배수 반영</th><th>비고</th></tr></thead><tbody id="battleRows"></tbody></table></div></section>
+<div class="reference-grid"><section class="card full" id="referenceExams"><h2>필수 전투 보상</h2><p class="hint">중간·기말고사는 1.5배 고정입니다.</p><div class="table-wrap"><table><thead><tr><th>전투 유형</th><th>기본 보상</th><th>배수 반영</th><th>비고</th></tr></thead><tbody id="battleRows"></tbody></table></div></section>
 <section class="card full" id="referenceSpecial"><h2>특별 전투 보상</h2><p class="hint">필수 전투와 단계별 보상을 따로 모았습니다. 랜덤 색상 보상은 실제 받은 양을 선택 기록에서 입력합니다.</p><div class="reward-grid" id="specialBattleCards"></div></section>
 <section class="card full" id="referenceBattles"><h2>전투 보상</h2><p class="hint">같은 색·수량 조합의 전투를 한 카드로 묶고, 3색 → 2색 → 1색 순서로 색 조합별 정렬합니다.</p><div class="reward-grid" id="currentObservedCards"></div></section><section class="card full" id="referenceStories"><h2>비전투 보상</h2><p class="hint">배수는 적용되지 않습니다. 스토리 보상은 3색 → 2색 → 1색 순서로 색 조합별 정렬했습니다.</p>
 <div class="reward-grid">
@@ -1408,7 +1819,7 @@ body.academy-home{font-family:var(--notebook-text);font-weight:400;line-height:1
 <p class="small">▲ 출현 확률 상승 · ▼ 출현 확률 하락 · 표시 없음: 확률 변화 없음. 확률은 원문의 반올림된 수치이며, 합계가 정확히 100%가 되지 않을 수 있습니다. 퀘스트 이름은 영문 원문을 옮긴 비공식 번역입니다.</p>
 <div class="probability-sources">자료: <a href="https://github.com/absolutelypm/pokemas-datamine/blob/main/2.74/Academy%20Event%20%7C%20Hot-Blooded%20Studies" target="_blank" rel="noopener">Absol-utely의 버전 2.74 열혈 수업 데이터마이닝</a> · <a href="https://pokemonmasters-game.com/en-US/announcements/Event_8030_3W_1" target="_blank" rel="noopener">4월 이벤트 공지 (출현율 상승 상한 관련)</a> · <a href="https://www.reddit.com/r/PokemonMasters/comments/1xud7le/psa_the_chances_of_blue_appearing_increase_the/" target="_blank" rel="noopener">5회 완주 관련 커뮤니티 추측</a></div>
 </div></section>
-<nav class="notebook-pagination" aria-label="수첩 페이지 넘기기"><button type="button" id="notebookPrevious" disabled><span aria-hidden="true">←</span> 앞 장</button><span class="notebook-page-number">PAGE <strong id="notebookPageNumber">01</strong> / 04</span><button type="button" id="notebookNext">수업 진행 <span aria-hidden="true">→</span></button></nav></div></main>
+<nav class="notebook-pagination" aria-label="수첩 페이지 넘기기"><button type="button" id="notebookPrevious" disabled><span aria-hidden="true">←</span> 앞 장</button><span class="notebook-page-number">PAGE <strong id="notebookPageNumber">01</strong> / 05</span><button type="button" id="notebookNext">수업 진행 <span aria-hidden="true">→</span></button></nav></div></main>
 <!-- BEGIN ACADEMY DIALOGS -->
 <dialog id="choiceNameDialog" class="name-picker">
 <div class="picker-head">
@@ -1868,8 +2279,8 @@ function update(){
  renderFirstTurnRecommendation(rem);
  queueAcademyRecommendation();
  syncStartCombinationInputs();
- const rows=[['중간고사','🟡 × 300',450,'배수 1.5배 고정'],['기말고사','🔴·🟢·🔵 각 × 200',900,'각 색 300개 · 배수 1.5배 고정']];
- document.getElementById('battleRows').innerHTML=rows.map(r=>'<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td><b>'+fmt(r[2])+'개</b></td><td>'+r[3]+'</td></tr>').join('');
+ const rows=[['중간고사','🟡 × 300',450,'배수 1.5배 고정'],['기말고사','🔴·🟢·🔵 각 × 200',900,'배수 1.5배 고정']];
+ document.getElementById('battleRows').innerHTML=rows.map(r=>{const amount=r[0]==='기말고사'?'<b>🔴 300개 · 🟢 300개 · 🔵 300개</b>':r[0]==='중간고사'?'<b>🟡 450개</b>':'<b>'+fmt(r[2])+'개</b>';return '<tr><td>'+r[0]+'</td><td>'+r[1]+'</td><td>'+amount+'</td><td>'+r[3]+'</td></tr>';}).join('');
  renderCurrentObserved();renderSpecialBattleCards();renderSelectionHistory();saveAppState();
  if(typeof refreshAcademyHomepage==='function')refreshAcademyHomepage();
 }
@@ -2986,7 +3397,67 @@ function refreshBoostPicker(message=''){
 }
 document.getElementById('boostCharacterList').addEventListener('click',event=>{const button=event.target.closest('[data-boost-id]');if(!button)return;const pair=boostPairs.find(item=>item.id===button.dataset.boostId);if(selectedBoostIds.has(pair.id))selectedBoostIds.delete(pair.id);else if(selectedBoostIds.size>=3){refreshBoostPicker('캐릭터는 최대 3명까지 선택할 수 있어요.');return;}else if(pair.trainer==='승재'&&boostPairs.some(other=>other.trainer==='승재'&&selectedBoostIds.has(other.id))){refreshBoostPicker('승재의 두 버전 중 하나만 선택할 수 있어요.');return;}else selectedBoostIds.add(pair.id);refreshBoostPicker();update();});
 document.getElementById('openMultiplierPicker').addEventListener('click',()=>{refreshBoostPicker();document.getElementById('multiplierDialog').showModal();});document.getElementById('closeMultiplierPicker').addEventListener('click',()=>document.getElementById('multiplierDialog').close());document.getElementById('doneMultiplierPicker').addEventListener('click',()=>document.getElementById('multiplierDialog').close());document.getElementById('multiplierDialog').addEventListener('click',event=>{if(event.target===event.currentTarget)event.currentTarget.close();});refreshBoostPicker();
-function setupBoardDragSelection(){const svg=document.getElementById('syncBoard');const applyToTile=(node,drag)=>{if(!node)return;const id=node.dataset.tileId;if(!id||drag.seen.has(id))return;drag.seen.add(id);const set=boardSelections[drag.variant];if(drag.selected)set.add(id);else set.delete(id);updateBoardTileAppearance(node,drag.selected);node.setAttribute('aria-pressed',String(drag.selected));lastBoardTile=id;showBoardTile(id);};svg.addEventListener('pointerdown',event=>{const node=event.target.closest&&event.target.closest('[data-tile-id]');if(!node||event.isPrimary===false||(event.pointerType==='mouse'&&event.button!==0))return;boardPointerDrag={pointerId:event.pointerId,variant:activeBoard,startX:event.clientX,startY:event.clientY,startNode:node,selected:!boardSelections[activeBoard].has(node.dataset.tileId),seen:new Set(),active:false};});svg.addEventListener('pointermove',event=>{const drag=boardPointerDrag;if(!drag||drag.pointerId!==event.pointerId)return;if(!drag.active&&Math.hypot(event.clientX-drag.startX,event.clientY-drag.startY)<6)return;if(!drag.active){drag.active=true;document.body.style.userSelect='none';applyToTile(drag.startNode,drag);}event.preventDefault();const underPointer=document.elementFromPoint(event.clientX,event.clientY),node=underPointer&&underPointer.closest&&underPointer.closest('[data-tile-id]');applyToTile(node,drag);});const finish=event=>{const drag=boardPointerDrag;if(!drag||drag.pointerId!==event.pointerId)return;boardPointerDrag=null;document.body.style.userSelect='';if(!drag.active)return;suppressBoardClick=true;window.setTimeout(()=>{suppressBoardClick=false;},150);updateBoardSummary();applyBoardToGoal();};window.addEventListener('pointerup',finish);window.addEventListener('pointercancel',finish);}
+/* A gesture belongs to its starting surface: tiles paint, empty paper scrolls.
+ * touch-action is assigned to tile hit polygons before pointerdown, since a
+ * browser decides native scrolling before JavaScript can switch gesture modes.
+ */
+/* A gesture belongs to its starting surface: tiles paint, empty paper scrolls.
+ * touch-action is assigned to tile hit polygons before pointerdown, since a
+ * browser decides native scrolling before JavaScript can switch gesture modes.
+ */
+function setupBoardDragSelection() {
+  const svg = document.getElementById('syncBoard');
+  const applyToTile = (node, drag) => {
+    if (!node || !svg.contains(node) || activeBoard !== drag.variant) return;
+    const id = node.dataset.tileId;
+    if (!id || drag.seen.has(id)) return;
+    drag.seen.add(id);
+    const selected = boardSelections[drag.variant];
+    if (drag.selected) selected.add(id); else selected.delete(id);
+    updateBoardTileAppearance(node, drag.selected);
+    node.setAttribute('aria-pressed', String(drag.selected));
+    lastBoardTile = id;
+    showBoardTile(id);
+  };
+  svg.addEventListener('pointerdown', event => {
+    const node = event.target.closest?.('[data-tile-id]');
+    if (!node || event.isPrimary === false || (event.pointerType === 'mouse' && event.button !== 0)) return;
+    boardPointerDrag = {
+      pointerId: event.pointerId, variant: activeBoard,
+      startX: event.clientX, startY: event.clientY, startNode: node,
+      selected: !boardSelections[activeBoard].has(node.dataset.tileId),
+      seen: new Set(), active: false,
+    };
+  });
+  svg.addEventListener('pointermove', event => {
+    const drag = boardPointerDrag;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    if (!drag.active && Math.hypot(event.clientX - drag.startX, event.clientY - drag.startY) < 6) return;
+    if (!drag.active) {
+      drag.active = true;
+      document.body.style.userSelect = 'none';
+      svg.setPointerCapture(event.pointerId);
+      applyToTile(drag.startNode, drag);
+    }
+    if (event.cancelable) event.preventDefault();
+    applyToTile(document.elementFromPoint(event.clientX, event.clientY)?.closest('[data-tile-id]'), drag);
+  });
+  const finish = event => {
+    const drag = boardPointerDrag;
+    if (!drag || drag.pointerId !== event.pointerId) return;
+    boardPointerDrag = null;
+    document.body.style.userSelect = '';
+    if (svg.hasPointerCapture(event.pointerId)) svg.releasePointerCapture(event.pointerId);
+    if (!drag.active) return;
+    suppressBoardClick = true;
+    window.setTimeout(() => { suppressBoardClick = false; }, 150);
+    updateBoardSummary();
+    applyBoardToGoal();
+  };
+  window.addEventListener('pointerup', finish);
+  window.addEventListener('pointercancel', finish);
+  svg.addEventListener('lostpointercapture', finish);
+}
 document.querySelectorAll('[data-board-variant]').forEach(b=>b.addEventListener('click',()=>setActiveBoard(b.dataset.boardVariant)));
 document.getElementById('boardClear').addEventListener('click',()=>{boardSelections[activeBoard].clear();boardBulkSelectionModes[activeBoard].red=false;boardBulkSelectionModes[activeBoard].blue=false;lastBoardTile=null;renderBoard();updateBoardSummary();applyBoardToGoal();});
 function toggleBoardTileGroup(group){const selected=boardSelections[activeBoard],modes=boardBulkSelectionModes[activeBoard],ids=getBoardBulkTileIds(group);if(modes[group]){const other=group==='red'?'blue':'red',keep=new Set(modes[other]?getBoardBulkTileIds(other):[]);ids.forEach(id=>{if(!keep.has(id))selected.delete(id);});modes[group]=false;}else{ids.forEach(id=>selected.add(id));modes[group]=true;}lastBoardTile=null;renderBoard();updateBoardSummary();applyBoardToGoal();saveAppState();}
@@ -3012,6 +3483,13 @@ function refreshAcademyHomepage() {
   if (!summary) return;
   const variant = activeBoard === 'water' ? '물의 오의' : '악의 오의';
   summary.textContent = variant + ' · ' + boardSelections[activeBoard].size + '타일 · ' + Number(document.getElementById('mult').value).toFixed(1) + '×';
+  const portrait = document.getElementById('boardTrainerPortrait');
+  if (portrait) {
+    const style = activeBoard === 'water' ? '연격태세' : '일격태세';
+    const source = 'characters/승재-' + style + '.png';
+    if (portrait.getAttribute('src') !== source) portrait.setAttribute('src', source);
+    portrait.alt = '승재 · ' + style + ' · ' + (activeBoard === 'water' ? '물' : '악');
+  }
   document.querySelectorAll('.manual-goal-settings input').forEach(input => {input.disabled = document.getElementById('boardAutoApply').checked;});
   const hint = document.getElementById('heldExamHint');
   hint.textContent = includeExams() ? '미리 반영한 시험 보상 포함' : '실제로 기록한 보유량 기준';
@@ -3038,6 +3516,7 @@ function refreshAcademyHomepage() {
     const markup = firstTurn.innerHTML;
     firstTurn.innerHTML = '<details class="first-turn-fold"><summary>' + escapeHtml(heading + (detail ? ' · ' + detail : '')) + '</summary><div class="first-turn-fold-body">' + markup + '</div></details>';
   }
+  if (window.academyMobileRefresh) window.academyMobileRefresh();
 }
 
 (() => {
@@ -3046,10 +3525,11 @@ function refreshAcademyHomepage() {
   const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
   let currentPage = 0;
   const chapters = [
-    ['첫 번째 장 · 준비', '보드와 배수 준비하기', '원하는 보드와 수업에 함께할 캐릭터를 골라보세요.'],
-    ['두 번째 장 · 수업', '오늘의 수업 기록', '현재 보유량과 추가 필요량을 확인하고, 이번 턴의 선택을 기록하세요.'],
-    ['세 번째 장 · 도감', '오브 보상 찾아보기', '전투부터 쉬는시간 교류까지, 수업에서 만나는 보상을 모았어요.'],
-    ['네 번째 장 · 참고', '등장 턴과 확률 정보', '선택지가 등장하는 시기와 보상 확률의 기준을 확인하세요.'],
+    ['첫 번째 장 · 안내', '아카데미 이벤트 알아보기', '이벤트의 기본 규칙과 이번 승재의 육성 방향을 확인하세요.'],
+    ['두 번째 장 · 준비', '보드와 배수 준비하기', '원하는 보드와 수업에 함께할 캐릭터를 골라보세요.'],
+    ['세 번째 장 · 수업', '오늘의 수업 기록', '현재 보유량과 추가 필요량을 확인하고, 이번 턴의 선택을 기록하세요.'],
+    ['네 번째 장 · 도감', '오브 보상 찾아보기', '전투부터 쉬는시간 교류까지, 수업에서 만나는 보상을 모았어요.'],
+    ['다섯 번째 장 · 참고', '등장 턴과 확률 정보', '선택지가 등장하는 시기와 보상 확률의 기준을 확인하세요.'],
   ];
   const previous = document.getElementById('notebookPrevious');
   const next = document.getElementById('notebookNext');
@@ -3060,8 +3540,9 @@ function refreshAcademyHomepage() {
       tab.tabIndex = index === i ? 0 : -1;
       panels[i].hidden = index !== i;
     });
-    document.getElementById('floatingChoiceAdd').hidden = index !== 1;
-    document.getElementById('mobileNotebookTools').hidden = index !== 1;
+    const isPlay = panels[index].id === 'calculatorPanel';
+    document.getElementById('floatingChoiceAdd').hidden = !isPlay;
+    document.getElementById('mobileNotebookTools').hidden = !isPlay;
     const chapter = chapters[index];
     document.getElementById('notebookChapterNumber').textContent = chapter[0];
     document.getElementById('notebookChapterTitle').textContent = chapter[1];
@@ -3069,7 +3550,8 @@ function refreshAcademyHomepage() {
     document.getElementById('notebookPageNumber').textContent = String(index + 1).padStart(2, '0');
     previous.disabled = index === 0;
     next.disabled = index === tabs.length - 1;
-    next.innerHTML = (index < tabs.length - 1 ? ['수업 진행', '보상 도감', '확률 정보'][index] : '마지막 장') + ' <span aria-hidden="true">→</span>';
+    const nextLabel = tabs[index + 1]?.getAttribute('aria-label') || '마지막 장';
+    next.innerHTML = escapeHtml(nextLabel) + ' <span aria-hidden="true">→</span>';
   }
   function pageTop() {
     document.querySelector('.academy-navigation').scrollIntoView({block:'start', behavior:reducedMotion.matches ? 'instant' : 'smooth'});
@@ -3095,8 +3577,10 @@ function refreshAcademyHomepage() {
     link.addEventListener('click', event => {
       event.preventDefault();
       const id = link.dataset.academyJump;
-      selectPanel(id === 'boardCard' ? 0 : 1);
       const target = document.getElementById(id);
+      const index = panels.indexOf(target?.closest('[role="tabpanel"]'));
+      if (index < 0) return;
+      selectPanel(index);
       target.scrollIntoView({block:'start', behavior:reducedMotion.matches ? 'instant' : 'smooth'});
       target.focus({preventScroll:true});
     });
@@ -3106,8 +3590,154 @@ function refreshAcademyHomepage() {
   next.addEventListener('click', () => { if(currentPage < tabs.length - 1){selectPanel(currentPage + 1);pageTop();} });
   // Restore a shared reference-section URL without hiding its destination.
   const hashTarget = location.hash && document.getElementById(location.hash.slice(1));
-  selectPanel(hashTarget && document.getElementById('referencePanel').contains(hashTarget) ? 2 : hashTarget && document.getElementById('calculatorPanel').contains(hashTarget) ? 1 : 0);
+  const hashPage = panels.findIndex(panel => hashTarget && panel.contains(hashTarget));
+  selectPanel(hashPage < 0 ? 0 : hashPage);
   refreshAcademyHomepage();
+})();
+
+/* Mobile presentation reads the live reference DOM. No reward/ranking data is
+ * copied into a second model, and no catalog interaction records a choice.
+ */
+(() => {
+  const panel = document.getElementById('referencePanel');
+  const source = panel.querySelector('.reference-grid');
+  const mobile = window.matchMedia('(max-width: 999px)');
+  const catalog = document.createElement('div');
+  catalog.className = 'mobile-catalog';
+  catalog.innerHTML = `<div class="mobile-catalog-tools">
+    <label for="mobileRewardSearch">보상 찾기</label>
+    <input id="mobileRewardSearch" type="search" placeholder="트레이너 이름·오브 색 검색" autocomplete="off">
+    <div class="mobile-catalog-filters" role="group" aria-label="보상 종류">
+      <button type="button" data-reward-category="all" aria-pressed="true">전체</button>
+      <button type="button" data-reward-category="exams" aria-pressed="false">필수</button>
+      <button type="button" data-reward-category="special" aria-pressed="false">특별</button>
+      <button type="button" data-reward-category="battles" aria-pressed="false">일반</button>
+      <button type="button" data-reward-category="stories" aria-pressed="false">비전투</button>
+    </div>
+    <p class="mobile-catalog-note">전투는 현재 배수 반영 · 시험은 1.5배 고정 · 비전투는 배수 미적용</p>
+  </div>
+  <p class="mobile-catalog-count" role="status" aria-live="polite"></p>
+  <div class="mobile-catalog-list"></div>
+  <p class="mobile-catalog-empty" hidden>해당 보상을 찾지 못했어요. 이름이나 색을 바꿔 검색해 보세요.</p>
+  <div class="mobile-catalog-footer"></div>`;
+  panel.append(catalog);
+  const list = catalog.querySelector('.mobile-catalog-list');
+  const search = catalog.querySelector('input');
+  let category = 'all';
+  let entries = [];
+  const normalize = value => value.normalize('NFKC').toLocaleLowerCase('ko').replace(/\s+/g, '');
+  // Ink icons have accessible color names instead of text nodes.
+  const readable = node => {
+    const clone = node.cloneNode(true);
+    clone.querySelectorAll('.notebook-ink-icon').forEach(icon => icon.replaceWith(document.createTextNode(icon.getAttribute('aria-label') || '')));
+    return clone.textContent.trim().replace(/\s+/g, ' ');
+  };
+  const copy = node => {
+    const clone = node.cloneNode(true);
+    clone.removeAttribute?.('id');
+    clone.querySelectorAll?.('[id]').forEach(child => child.removeAttribute('id'));
+    return clone;
+  };
+  const addEntry = (group, title, preview, nodes, searchText) => {
+    const item = document.createElement('details');
+    item.className = 'mobile-reward';
+    item.dataset.category = group;
+    item.dataset.rewardKey = group + ':' + entries.length;
+    const summary = document.createElement('summary');
+    const tag = document.createElement('span');
+    tag.className = 'mobile-reward-kind';
+    tag.textContent = {exams:'필수 전투',special:'특별 전투',battles:'일반 전투',stories:'비전투'}[group];
+    const heading = document.createElement('strong');
+    heading.textContent = title;
+    const reward = document.createElement('span');
+    reward.className = 'mobile-reward-preview';
+    if (typeof preview === 'string') reward.textContent = preview;
+    else reward.append(copy(preview));
+    summary.append(tag, heading, reward);
+    const body = document.createElement('div');
+    body.className = 'mobile-reward-body';
+    nodes.forEach(node => body.append(copy(node)));
+    item.append(summary, body);
+    entries.push({item, text:normalize(title + ' ' + searchText + ' ' + readable(body))});
+    list.append(item);
+  };
+  function filter() {
+    const terms = search.value.split(/[\s,·]+/).map(normalize).filter(Boolean);
+    let count = 0;
+    for (const entry of entries) {
+      entry.item.hidden = (category !== 'all' && entry.item.dataset.category !== category) || !terms.every(term => entry.text.includes(term));
+      if (!entry.item.hidden) count++;
+    }
+    catalog.querySelector('.mobile-catalog-count').textContent = `${count}개 보상 · 눌러서 자세히 보기`;
+    catalog.querySelector('.mobile-catalog-empty').hidden = count !== 0;
+  }
+  function rebuild() {
+    if (!mobile.matches) return;
+    const opened = new Set([...list.querySelectorAll('details[open]')].map(item => item.dataset.rewardKey));
+    entries = [];
+    list.replaceChildren();
+    const table = source.querySelector('#referenceExams table');
+    const labels = [...table.querySelectorAll('thead th')].map(readable);
+    table.querySelectorAll('tbody tr').forEach(row => {
+      const cells = [...row.children];
+      const body = document.createElement('dl');
+      body.className = 'mobile-reward-facts';
+      cells.slice(1).forEach((cell, index) => {
+        const line = document.createElement('div');
+        const label = document.createElement('dt');
+        label.textContent = labels[index + 1];
+        const value = document.createElement('dd');
+        value.append(...[...cell.childNodes].map(copy));
+        line.append(label, value);
+        body.append(line);
+      });
+      addEntry('exams', readable(cells[0]), cells[2] || cells[1], [body], readable(row));
+    });
+    for (const [id, group] of [['referenceSpecial','special'],['referenceBattles','battles'],['referenceStories','stories']]) {
+      source.querySelectorAll('#' + id + ' .reward-card').forEach(card => {
+        const heading = card.querySelector('h3');
+        const lines = [...card.querySelectorAll('.reward-line')];
+        const common = [...card.children].filter(child => child.tagName === 'P');
+        if (group === 'stories' && lines.length) {
+          lines.forEach(line => {
+            const title = line.querySelector('b');
+            const preview = copy(line);
+            preview.querySelector('b')?.remove();
+            addEntry(group, title ? readable(title) : readable(heading), preview, [...common,line], readable(heading));
+          });
+        } else {
+          const names = [...card.querySelectorAll('.name-list span')].map(readable);
+          const title = names.length ? names.slice(0,2).join(' · ') + (names.length > 2 ? ` 외 ${names.length-2}명` : '') : readable(heading);
+          const preview = [...card.children].find(child => child.classList.contains('small')) || lines[0] || heading;
+          addEntry(group, title, preview, [...card.children].filter(child => child !== heading), readable(card));
+        }
+      });
+    }
+    list.querySelectorAll('details').forEach(item => { item.open = opened.has(item.dataset.rewardKey); });
+    const footer = catalog.querySelector('.mobile-catalog-footer');
+    footer.replaceChildren();
+    const chart = source.querySelector('.chart-link');
+    if (chart) {
+      const link = document.createElement('a');
+      link.href = chart.getAttribute('href');
+      link.target = '_blank';
+      link.rel = 'noopener';
+      link.textContent = '원본 보상표 크게 보기 ↗';
+      footer.append(link);
+    }
+    const warning = source.querySelector('#referenceStories > .warning');
+    if (warning) footer.append(copy(warning));
+    filter();
+  }
+  search.addEventListener('input', filter);
+  catalog.querySelectorAll('[data-reward-category]').forEach(button => button.addEventListener('click', () => {
+    category = button.dataset.rewardCategory;
+    catalog.querySelectorAll('[data-reward-category]').forEach(item => item.setAttribute('aria-pressed', String(item === button)));
+    filter();
+  }));
+  mobile.addEventListener('change', rebuild);
+  window.academyMobileRefresh = rebuild;
+  rebuild();
 })();
 
 /* Hand-drawn presentation icons. Game data and picker search strings stay intact. */
@@ -3200,6 +3830,12 @@ function refreshAcademyHomepage() {
 (() => {
   const trigger = document.getElementById('academyHelpButton');
   const guides = {
+    eventGuidePanel: {name:'이벤트 안내 읽기', steps:[
+      ['#academyBasicsTitle','아카데미 기본 안내','왼쪽 페이지에서 이벤트의 진행 순서와 시험, 보드 확정 규칙을 읽을 수 있습니다. 작은 화면에서는 기본 안내 다음에 이번 이벤트 공략이 이어집니다.'],
+      ['#academyFiveClears','5회 완주와 주요 교류','먼저 완주 횟수를 채우는 이유와 그린·오박사 보상의 차이를 확인하세요. 등장 확률과 보상 결과 확률은 서로 다릅니다.'],
+      ['#academyCurrentTitle','이번 이벤트 확인하기','오른쪽 페이지에는 승재와 우라오스의 태세 선택과 공통 육성 방향을 정리했습니다.'],
+      ['#academyMoveGuide','추천 기술머신 비교하기','바위깨기를 공통으로 두고 나머지 두 기술을 용도에 맞게 고르세요. 추천 조합 옆의 출처 링크에서 원문을 확인할 수 있습니다.'],
+    ]},
     setupPanel: {name:'보드·배수 사용법', steps:[
       ['.board-switch','보드 종류 고르기','연격태세는 물 타입, 일격태세는 악 타입입니다. 완성하려는 보드를 먼저 선택하세요. 두 보드의 선택 상태는 따로 보관됩니다.'],
       ['#syncBoard','원하는 타일 선택하기','타일을 누르면 선택되고, 다시 누르면 해제됩니다. 이어서 드래그해 여러 타일을 고를 수도 있습니다. 선택한 타일의 오브 요구량을 합산합니다.'],
@@ -3211,7 +3847,7 @@ function refreshAcademyHomepage() {
     calculatorPanel: {name:'수업 진행 사용법', steps:[
       ['.lesson-strip','현재 턴 확인하기','기록으로 다음 턴을 자동 계산합니다. 실제 게임과 다르면 턴을 직접 지정하세요. 수동 턴은 기록을 추가해도 유지되므로 다음 턴도 직접 바꿔야 합니다.'],
       ['.inventory-held','현재 보유량 입력하기','네 색의 보유량을 확인하거나 수정하세요. 시험 보상 기본 반영을 켜면 아직 받지 않은 시험 보상이 미리 포함됩니다. 실제 수량과 비교할 때 이 점을 확인하세요.'],
-      ['.inventory-needed','추가 필요량 읽기','첫 장에서 설정한 목표까지 더 모아야 하는 수량입니다. 0개인 색은 현재 계산 기준으로 목표를 채운 상태입니다.'],
+      ['.inventory-needed','추가 필요량 읽기','보드·배수 탭에서 설정한 목표까지 더 모아야 하는 수량입니다. 0개인 색은 현재 계산 기준으로 목표를 채운 상태입니다.'],
       ['.history-card .selection-heading','선택한 보상 기록하기','선택 추가를 누르고 실제로 고른 항목을 기록하세요. 랜덤 보상은 실제 받은 색과 수량을 입력합니다. 기록 추가·수정·삭제는 보유량에도 반영됩니다.'],
       ['.planner-ranking-head','추천 성향 선택하기','기본 추천과 고점 우선 중 원하는 성향을 고르세요. 고점 우선은 큰 보상 결과를 더 고려하지만 실제 목표 달성 확률이 높다는 뜻은 아닙니다.'],
       ['#plannerResults','이번 턴의 후보 비교하기','순위와 보상, 필요한 조건을 비교하세요. 같은 보상을 주는 항목은 묶어서 표시하며 이름 목록과 추천 이유를 펼칠 수 있습니다. 실제 게임에 등장한 후보 중에서 판단하세요.'],
@@ -3306,6 +3942,7 @@ function refreshAcademyHomepage() {
     const selected=document.querySelector('.academy-navigation [role="tab"][aria-selected="true"]');
     const panel=document.getElementById(selected.getAttribute('aria-controls'));
     const guide=guides[panel.id];
+    if(!guide)return;
     const steps=guide.steps.map(([selector,title,text])=>({element:panel.querySelector(selector),title,text})).filter(item=>item.element && item.element.getClientRects().length);
     if(!steps.length)return;
     returnFocus=document.activeElement;
