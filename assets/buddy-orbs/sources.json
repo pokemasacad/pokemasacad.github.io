@@ -1,0 +1,57 @@
+{
+  "repository": "MaNeRz/Pokemon-Masters-EX-Asset-Library",
+  "downloaded": "2026-11-21",
+  "note": "Unmodified repository PNG payloads; not upscaled or cropped.",
+  "assets": [
+    {
+      "color": "red",
+      "file": "red.png",
+      "source": "https://raw.githubusercontent.com/MaNeRz/Pokemon-Masters-EX-Asset-Library/main/Items/Academy/Orbs/i200_0000_00__Fiery%20Orb.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 11589,
+      "sha256": "a10cc38682f1c6eddcfbaf9f01b99ab55d230a50ea821e8cc59a0bd382c2fcb9",
+      "git_blob_sha": "556a92a6c2f8398e63dcbb8dd6c871b093f1a1fc"
+    },
+    {
+      "color": "blue",
+      "file": "blue.png",
+      "source": "https://raw.githubusercontent.com/MaNeRz/Pokemon-Masters-EX-Asset-Library/main/Items/Academy/Orbs/i200_0002_00__Bubbly%20Orb.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 11521,
+      "sha256": "a9269b0850a0e298a8097e1af25f6b6ad713572f25f1d62062387efb5b515c6f",
+      "git_blob_sha": "a60d206dcae021edcca8d00034fffa123b03f4ff"
+    },
+    {
+      "color": "green",
+      "file": "green.png",
+      "source": "https://raw.githubusercontent.com/MaNeRz/Pokemon-Masters-EX-Asset-Library/main/Items/Academy/Orbs/i200_0001_00__Leafy%20Orb.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 11669,
+      "sha256": "28e8854cd26a07938fa116bd697096c07deed034471aa15f398356ffae2a5783",
+      "git_blob_sha": "494c2a1ee29b25068a31bda9c2851bd639386c11"
+    },
+    {
+      "color": "yellow",
+      "file": "yellow.png",
+      "source": "https://raw.githubusercontent.com/MaNeRz/Pokemon-Masters-EX-Asset-Library/main/Items/Academy/Orbs/i200_0003_00__Sparky%20Orb.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 11377,
+      "sha256": "f8e4aa8c12abd000a4a1e8b8b281e8e56c773661fa3cbc2093be2ebeddf59579",
+      "git_blob_sha": "51818242d870d987d4f8eb58e10e3177975074a5"
+    },
+    {
+      "color": "tm",
+      "file": "tm.png",
+      "source": "https://raw.githubusercontent.com/MaNeRz/Pokemon-Masters-EX-Asset-Library/main/Items/Academy/Orbs/i200_0004_00__TM%20Orb.png",
+      "width": 256,
+      "height": 256,
+      "bytes": 11937,
+      "sha256": "c28741aa84f2b37f9893f0ca0790173928e6177d18a4bc2203124417fd8adb93",
+      "git_blob_sha": "98004ffab3bf5699b346814145612923e4c7bc0b"
+    }
+  ]
+}

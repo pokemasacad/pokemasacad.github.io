@@ -941,6 +941,10 @@ body.academy-home{font-family:var(--notebook-text);font-weight:400;line-height:1
 .planner-advisory{border-left-style:double!important;border-left-width:3px!important}
 .notebook-ink-icon{display:inline-block;position:relative;width:1.16em;height:1.16em;vertical-align:-.2em;margin-inline:.05em;flex:none;line-height:1}
 .notebook-ink-icon svg{display:block;width:100%;height:100%;overflow:visible}
+.buddy-orb-icon{overflow:hidden}
+/* Native 256px textures have transparent margins; show the 98px artwork area
+   without rewriting or enlarging the source PNG files. */
+.buddy-orb-icon img{display:block;position:absolute;width:261.22449%;height:261.22449%;max-width:none;left:-84.69388%;top:-83.67347%;pointer-events:none}
 .ink-red{color:#d94f57;--orb-edge:#b03d44}.ink-blue{color:#4387cf;--orb-edge:#2a67a6}.ink-green{color:#3d9b68;--orb-edge:#297348}.ink-yellow{color:#e1b52d;--orb-edge:#aa8118}.notebook-ink-icon .orb-fill{stroke:var(--orb-edge,currentColor);stroke-width:1.35;fill-opacity:1}.ink-gold{color:var(--academy-gold)}.ink-ink{color:var(--ink)}
 .theme-toggle .notebook-ink-icon{width:21px;height:21px;vertical-align:middle;margin:0}
 .inventory-color-head .notebook-ink-icon{width:17px;height:17px;vertical-align:-4px}
@@ -3940,24 +3944,22 @@ function refreshAcademyHomepage() {
   rebuild();
 })();
 
-/* Hand-drawn presentation icons. Game data and picker search strings stay intact. */
+/* Native buddy PNGs and hand-drawn presentation icons. Game/search data stays intact. */
 (() => {
   const ns = 'http://www.w3.org/2000/svg';
-  const orb = '<path class="orb-fill" d="M12 2.6C6.8 2.1 2.7 6.8 2.8 12c-.3 5.5 4.1 9.4 9.5 9.1 5.5.1 9.2-4.1 9-9.5.2-5.2-4-9.1-9.3-9Z" fill="currentColor"/><path d="M6 7.7c1.2-1.7 3.2-2.7 5.2-2.8" stroke="#fff" opacity=".85"/><path d="M17.9 15.8c-1.1 2-3.4 3.1-5.5 3" stroke="#fff" opacity=".35"/>';
   const drawings = {
     target:'<path d="M17.7 6.4A8.6 8.6 0 1 0 21 13M14 9a4.5 4.5 0 1 0 2 4M12 12l8.7-9M17.3 2.8l-.2 4.4 4.4.1"/>',
     check:'<path d="M20.6 10.7c1.1 7.1-4.7 11.9-11 10.1C3.6 19.6.8 12.4 4.4 7.2 6.8 3.3 12.2 1.7 16 4M7.4 11.8l3.3 3.5 9.8-11"/>',
-    case:'<path d="m3.4 7.7 17.4.4-.5 12-17.1-.4ZM8.2 7.7l.1-3.5 7.4.2-.1 3.4M3.3 12.1l17.1.4M10.2 11.2l-.1 3 3.7.1.1-3.1"/>',
     book:'<path d="M12 5.7C9.1 3.9 5 4 2.7 4.5l.5 14c3-.4 6.2-.2 9 1.7 2.8-1.7 6.1-1.8 9.1-1.1l-.4-14c-3-.7-6.2-.9-8.9.6Zm0 0 .2 14.5M5.7 8.5l3.3.3M6 12l3 .3M15.3 8.9l3.1-.2M15.5 12.4l2.9-.2"/>',
     dice:'<path d="m4 3.7 16.2.5-.7 16.3-16-.6Z"/><path d="m7.3 7.7.1.1m9.1.1.1.1m-4.6 4.1.1.1m-4.9 4 .1.1m8.9.2.1.1" stroke-width="3"/>',
     sun:'<path d="M16.7 9.6c-1.6-3.3-7.3-3.1-9 .1-1.8 3.9.8 7.3 4.5 7.3 4.1.1 6.3-3.9 4.5-7.4ZM12 1.6l.1 2.2m7.4.2-1.7 1.7M22.2 12l-2.4.1m-.3 7.4-1.7-1.7M12 22.3l.1-2.6m-7.7-.2 1.8-1.8M1.7 12l2.6-.1M4.5 4.4l1.6 1.8"/>',
     moon:'<path d="M14.4 2.4C4.7 1.7-.2 12.7 6.7 19.2c5.9 5.8 15.6 1.3 14.7-6.2-6 3.4-12.7-3-7-10.6Z"/>',
   };
   const symbols = new Map([
-    ['🔴',{shape:orb,tone:'red',label:'빨강'}],['🔵',{shape:orb,tone:'blue',label:'파랑'}],
-    ['🟢',{shape:orb,tone:'green',label:'초록'}],['🟡',{shape:orb,tone:'yellow',label:'노랑'}],
+    ['🔴',{image:'red',tone:'red',label:'빨강 버디'}],['🔵',{image:'blue',tone:'blue',label:'파랑 버디'}],
+    ['🟢',{image:'green',tone:'green',label:'초록 버디'}],['🟡',{image:'yellow',tone:'yellow',label:'노랑 버디'}],
     ['🎯',{shape:drawings.target,tone:'blue',label:'추천'}],['✅',{shape:drawings.check,tone:'green',label:'완료'}],
-    ['🧰',{shape:drawings.case,tone:'ink',label:'기술머신 버디'}],['📖',{shape:drawings.book,tone:'ink',label:'스토리'}],
+    ['🧰',{image:'tm',tone:'ink',label:'기술머신 오브'}],['📖',{shape:drawings.book,tone:'ink',label:'스토리'}],
     ['🎲',{shape:drawings.dice,tone:'gold',label:'랜덤 보상'}],['🌙',{shape:drawings.moon,tone:'gold',label:'다크 모드'}],
     ['☀️',{shape:drawings.sun,tone:'gold',label:'태양'}],['☀',{shape:drawings.sun,tone:'gold',label:'태양'}],
   ]);
@@ -3981,16 +3983,27 @@ function refreshAcademyHomepage() {
       icon.className = 'notebook-ink-icon ink-' + art.tone;
       icon.setAttribute('role','img');
       icon.setAttribute('aria-label',art.label);
-      const svg = document.createElementNS(ns,'svg');
-      svg.setAttribute('viewBox','0 0 24 24');
-      svg.setAttribute('fill','none');
-      svg.setAttribute('stroke','currentColor');
-      svg.setAttribute('stroke-width','1.65');
-      svg.setAttribute('stroke-linecap','round');
-      svg.setAttribute('stroke-linejoin','round');
-      svg.setAttribute('aria-hidden','true');
-      svg.innerHTML = art.shape;
-      icon.append(svg);
+      if(art.image) {
+        icon.classList.add('buddy-orb-icon');
+        const image = document.createElement('img');
+        image.src = 'assets/buddy-orbs/' + art.image + '.png';
+        image.alt = '';
+        image.width = image.height = 256;
+        image.setAttribute('aria-hidden','true');
+        image.draggable = false;
+        icon.append(image);
+      } else {
+        const svg = document.createElementNS(ns,'svg');
+        svg.setAttribute('viewBox','0 0 24 24');
+        svg.setAttribute('fill','none');
+        svg.setAttribute('stroke','currentColor');
+        svg.setAttribute('stroke-width','1.65');
+        svg.setAttribute('stroke-linecap','round');
+        svg.setAttribute('stroke-linejoin','round');
+        svg.setAttribute('aria-hidden','true');
+        svg.innerHTML = art.shape;
+        icon.append(svg);
+      }
       fragment.append(icon);
       offset = match.index + match[0].length;
     }
